@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PostDetailsViewController.h
 //  WashingtonPostCodeTest
 //
 //  Created by Terry Wang on 9/29/14.
@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Post.h"
 
-@interface ViewController : UIViewController
-
+@interface PostDetailsViewController : UIViewController
+@property (strong, nonatomic) Post *post;
 
 @end
-

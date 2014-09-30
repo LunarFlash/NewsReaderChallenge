@@ -10,11 +10,15 @@
 		374EDF2D19DA0E8F00596704 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF2C19DA0E8F00596704 /* main.m */; };
 		374EDF3019DA0E8F00596704 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF2F19DA0E8F00596704 /* AppDelegate.m */; };
 		374EDF3319DA0E8F00596704 /* WashingtonPostCodeTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF3119DA0E8F00596704 /* WashingtonPostCodeTest.xcdatamodeld */; };
-		374EDF3619DA0E8F00596704 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF3519DA0E8F00596704 /* ViewController.m */; };
 		374EDF3919DA0E8F00596704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374EDF3719DA0E8F00596704 /* Main.storyboard */; };
 		374EDF3B19DA0E8F00596704 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374EDF3A19DA0E8F00596704 /* Images.xcassets */; };
 		374EDF3E19DA0E8F00596704 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374EDF3C19DA0E8F00596704 /* LaunchScreen.xib */; };
 		374EDF4A19DA0E8F00596704 /* WashingtonPostCodeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF4919DA0E8F00596704 /* WashingtonPostCodeTestTests.m */; };
+		374EDF5619DA0EFF00596704 /* NewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF5519DA0EFF00596704 /* NewsFeedTableViewController.m */; };
+		374EDF5A19DA0FAF00596704 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF5919DA0FAF00596704 /* Constants.m */; };
+		374EDF5F19DA1D9C00596704 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF5E19DA1D9C00596704 /* Post.m */; };
+		374EDF6219DA231000596704 /* PostDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF6119DA231000596704 /* PostDetailsViewController.m */; };
+		9ECBF66600E5474480DC865A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FABEF18E5C40B599C8D1E5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +38,22 @@
 		374EDF2E19DA0E8F00596704 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		374EDF2F19DA0E8F00596704 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		374EDF3219DA0E8F00596704 /* WashingtonPostCodeTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WashingtonPostCodeTest.xcdatamodel; sourceTree = "<group>"; };
-		374EDF3419DA0E8F00596704 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		374EDF3519DA0E8F00596704 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		374EDF3819DA0E8F00596704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		374EDF3A19DA0E8F00596704 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		374EDF3D19DA0E8F00596704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		374EDF4319DA0E8F00596704 /* WashingtonPostCodeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WashingtonPostCodeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		374EDF4819DA0E8F00596704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		374EDF4919DA0E8F00596704 /* WashingtonPostCodeTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WashingtonPostCodeTestTests.m; sourceTree = "<group>"; };
+		374EDF5419DA0EFF00596704 /* NewsFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeedTableViewController.h; sourceTree = "<group>"; };
+		374EDF5519DA0EFF00596704 /* NewsFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeedTableViewController.m; sourceTree = "<group>"; };
+		374EDF5819DA0FAF00596704 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		374EDF5919DA0FAF00596704 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		374EDF5D19DA1D9C00596704 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		374EDF5E19DA1D9C00596704 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		374EDF6019DA231000596704 /* PostDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailsViewController.h; sourceTree = "<group>"; };
+		374EDF6119DA231000596704 /* PostDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailsViewController.m; sourceTree = "<group>"; };
+		92FABEF18E5C40B599C8D1E5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E708E4CF154EE7A878E86C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ECBF66600E5474480DC865A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +81,8 @@
 				374EDF2919DA0E8F00596704 /* WashingtonPostCodeTest */,
 				374EDF4619DA0E8F00596704 /* WashingtonPostCodeTestTests */,
 				374EDF2819DA0E8F00596704 /* Products */,
+				A5E708E4CF154EE7A878E86C /* Pods.xcconfig */,
+				9A4CCB410D0244F0BFE25794 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,11 +98,10 @@
 		374EDF2919DA0E8F00596704 /* WashingtonPostCodeTest */ = {
 			isa = PBXGroup;
 			children = (
-				374EDF2E19DA0E8F00596704 /* AppDelegate.h */,
-				374EDF2F19DA0E8F00596704 /* AppDelegate.m */,
-				374EDF3419DA0E8F00596704 /* ViewController.h */,
-				374EDF3519DA0E8F00596704 /* ViewController.m */,
-				374EDF3719DA0E8F00596704 /* Main.storyboard */,
+				374EDF5C19DA1D8300596704 /* Model */,
+				374EDF5B19DA0FB800596704 /* Consts */,
+				374EDF5719DA0F0600596704 /* Initialize */,
+				374EDF5319DA0EC400596704 /* ViewControllers */,
 				374EDF3A19DA0E8F00596704 /* Images.xcassets */,
 				374EDF3C19DA0E8F00596704 /* LaunchScreen.xib */,
 				374EDF3119DA0E8F00596704 /* WashingtonPostCodeTest.xcdatamodeld */,
@@ -122,6 +136,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		374EDF5319DA0EC400596704 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				374EDF5419DA0EFF00596704 /* NewsFeedTableViewController.h */,
+				374EDF5519DA0EFF00596704 /* NewsFeedTableViewController.m */,
+				374EDF6019DA231000596704 /* PostDetailsViewController.h */,
+				374EDF6119DA231000596704 /* PostDetailsViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		374EDF5719DA0F0600596704 /* Initialize */ = {
+			isa = PBXGroup;
+			children = (
+				374EDF2E19DA0E8F00596704 /* AppDelegate.h */,
+				374EDF2F19DA0E8F00596704 /* AppDelegate.m */,
+				374EDF3719DA0E8F00596704 /* Main.storyboard */,
+			);
+			name = Initialize;
+			sourceTree = "<group>";
+		};
+		374EDF5B19DA0FB800596704 /* Consts */ = {
+			isa = PBXGroup;
+			children = (
+				374EDF5819DA0FAF00596704 /* Constants.h */,
+				374EDF5919DA0FAF00596704 /* Constants.m */,
+			);
+			name = Consts;
+			sourceTree = "<group>";
+		};
+		374EDF5C19DA1D8300596704 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				374EDF5D19DA1D9C00596704 /* Post.h */,
+				374EDF5E19DA1D9C00596704 /* Post.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9A4CCB410D0244F0BFE25794 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92FABEF18E5C40B599C8D1E5 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 374EDF4D19DA0E8F00596704 /* Build configuration list for PBXNativeTarget "WashingtonPostCodeTest" */;
 			buildPhases = (
+				AA4BEC8204E840E186D1EB10 /* Check Pods Manifest.lock */,
 				374EDF2319DA0E8F00596704 /* Sources */,
 				374EDF2419DA0E8F00596704 /* Frameworks */,
 				374EDF2519DA0E8F00596704 /* Resources */,
+				A3418792BCBA46B8A56FE491 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,15 +280,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A3418792BCBA46B8A56FE491 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA4BEC8204E840E186D1EB10 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		374EDF2319DA0E8F00596704 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374EDF5A19DA0FAF00596704 /* Constants.m in Sources */,
+				374EDF5F19DA1D9C00596704 /* Post.m in Sources */,
 				374EDF3319DA0E8F00596704 /* WashingtonPostCodeTest.xcdatamodeld in Sources */,
+				374EDF6219DA231000596704 /* PostDetailsViewController.m in Sources */,
 				374EDF3019DA0E8F00596704 /* AppDelegate.m in Sources */,
-				374EDF3619DA0E8F00596704 /* ViewController.m in Sources */,
 				374EDF2D19DA0E8F00596704 /* main.m in Sources */,
+				374EDF5619DA0EFF00596704 /* NewsFeedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +444,7 @@
 		};
 		374EDF4E19DA0E8F00596704 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E708E4CF154EE7A878E86C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WashingtonPostCodeTest/Info.plist;
@@ -355,6 +455,7 @@
 		};
 		374EDF4F19DA0E8F00596704 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E708E4CF154EE7A878E86C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WashingtonPostCodeTest/Info.plist;
@@ -416,6 +517,7 @@
 				374EDF4F19DA0E8F00596704 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		374EDF5019DA0E8F00596704 /* Build configuration list for PBXNativeTarget "WashingtonPostCodeTestTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +526,7 @@
 				374EDF5219DA0E8F00596704 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
