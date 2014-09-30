@@ -33,7 +33,7 @@
 
     
     self.feedURL = kFeedURL; // set feed URL using global const design pattern
-    
+   
     [self fetchPosts];
     
     
@@ -41,6 +41,10 @@
 }
 
 - (void) fetchPosts {
+    
+    // This will run the networking off of the main thread, and the callback will come from a system network queue. Generally this is what we want.
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];  // let user know we are using the network
     
     NSURL *url = [NSURL URLWithString:self.feedURL];
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url
@@ -55,9 +59,10 @@
                                       self.posts = [responseData valueForKey:@"posts"];
                                       // NSLog(@"posts.count:%lu", self.posts.count);
                                       [self.tableView reloadData];
-                                      
+                                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                   } else {
                                       NSLog(@"Failed to fetch %@: %@", url, error);
+                                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                   }
                               }];
     [task resume];
@@ -93,10 +98,10 @@
     
     
     UILabel *titleLabel = (UILabel*) [cell viewWithTag:100];
-    titleLabel.text = postDict[@"title"];
-    //titleLabel.text = post.title;
-    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[post.title dataUsingEncoding:NSUnicodeStringEncoding] options:nil documentAttributes:nil error:nil];
-    titleLabel.attributedText = attrStr;
+    //titleLabel.text = postDict[@"title"];
+    titleLabel.text = post.title;
+    //NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[post.title dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    //titleLabel.attributedText = attrStr;
     
     
     UILabel *dateLabel = (UILabel*) [cell viewWithTag:101];

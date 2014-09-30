@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "Constants.h"
+#import "Post.h"
 
 @interface WashingtonPostCodeTestTests : XCTestCase
 
@@ -36,5 +38,42 @@
         // Put the code you want to measure the time of here.
     }];
 }
+
+- (void)testFetchPosts{
+    // This will run the networking off of the main thread, and the callback will come from a system network queue. Generally this is what we want.
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];  // let user know we are using the network
+    
+    NSURL *url = [NSURL URLWithString:kFeedURL];
+    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url
+                                                         completionHandler:
+                              ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                  if (data) {
+                                      // Do stuff with the data
+                                      
+                                      NSDictionary *responseData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                      // NSLog(@"reponseData:%@", responseData);
+                                      
+                                      NSArray *posts = [responseData valueForKey:@"posts"];
+                                      //NSLog(@"posts.count:%lu", posts.count);
+                                      //[self.tableView reloadData];
+                                      XCTAssertNotNil(posts, @"Post should not be nil if fetch is successful");
+                                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                                  } else {
+                                      // NSLog(@"Failed to fetch %@: %@", url, error);
+                                      XCTAssertFalse(false, @"Could not fatch response");
+                                  }
+                              }];
+    [task resume];
+    
+}
+
+
+
+
+
+
+
+
 
 @end

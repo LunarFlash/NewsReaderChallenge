@@ -18,6 +18,9 @@
 		374EDF5A19DA0FAF00596704 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF5919DA0FAF00596704 /* Constants.m */; };
 		374EDF5F19DA1D9C00596704 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF5E19DA1D9C00596704 /* Post.m */; };
 		374EDF6219DA231000596704 /* PostDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDF6119DA231000596704 /* PostDetailsViewController.m */; };
+		374EDFAA19DB137100596704 /* PostTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDFA919DB137100596704 /* PostTestCase.m */; };
+		374EDFAD19DB1A3D00596704 /* NewsFeedNetworkTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 374EDFAC19DB1A3D00596704 /* NewsFeedNetworkTestCase.m */; };
+		374EDFAF19DB4C0900596704 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 374EDFAE19DB4C0900596704 /* Podfile */; };
 		9ECBF66600E5474480DC865A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FABEF18E5C40B599C8D1E5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,11 @@
 		374EDF5E19DA1D9C00596704 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		374EDF6019DA231000596704 /* PostDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailsViewController.h; sourceTree = "<group>"; };
 		374EDF6119DA231000596704 /* PostDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailsViewController.m; sourceTree = "<group>"; };
+		374EDFA819DB137100596704 /* PostTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTestCase.h; sourceTree = "<group>"; };
+		374EDFA919DB137100596704 /* PostTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostTestCase.m; sourceTree = "<group>"; };
+		374EDFAB19DB1A3D00596704 /* NewsFeedNetworkTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeedNetworkTestCase.h; sourceTree = "<group>"; };
+		374EDFAC19DB1A3D00596704 /* NewsFeedNetworkTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeedNetworkTestCase.m; sourceTree = "<group>"; };
+		374EDFAE19DB4C0900596704 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		92FABEF18E5C40B599C8D1E5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E708E4CF154EE7A878E86C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,8 +130,12 @@
 		374EDF4619DA0E8F00596704 /* WashingtonPostCodeTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				374EDF4919DA0E8F00596704 /* WashingtonPostCodeTestTests.m */,
 				374EDF4719DA0E8F00596704 /* Supporting Files */,
+				374EDFAB19DB1A3D00596704 /* NewsFeedNetworkTestCase.h */,
+				374EDFAC19DB1A3D00596704 /* NewsFeedNetworkTestCase.m */,
+				374EDF4919DA0E8F00596704 /* WashingtonPostCodeTestTests.m */,
+				374EDFA819DB137100596704 /* PostTestCase.h */,
+				374EDFA919DB137100596704 /* PostTestCase.m */,
 			);
 			path = WashingtonPostCodeTestTests;
 			sourceTree = "<group>";
@@ -131,6 +143,7 @@
 		374EDF4719DA0E8F00596704 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				374EDFAE19DB4C0900596704 /* Podfile */,
 				374EDF4819DA0E8F00596704 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -275,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374EDFAF19DB4C0900596704 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				374EDF4A19DA0E8F00596704 /* WashingtonPostCodeTestTests.m in Sources */,
+				374EDFAA19DB137100596704 /* PostTestCase.m in Sources */,
+				374EDFAD19DB1A3D00596704 /* NewsFeedNetworkTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

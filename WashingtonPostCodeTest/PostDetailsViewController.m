@@ -27,6 +27,16 @@
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     
+    
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[self.post.title dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    //self.titleLabel.attributedText = attrStr;
+    
+    
+     // To Do remove &' from string
+    NSString *titleString = [self.title stringByReplacingOccurrencesOfString:@"&amp;" withString:@"&"];
+   
+    
+    
     self.titleLabel.text = self.post.title;
     [self.contentWebView loadHTMLString:self.post.content baseURL:nil];
     self.dateLabel.text = [self.dateFormatter stringFromDate:self.post.date];
