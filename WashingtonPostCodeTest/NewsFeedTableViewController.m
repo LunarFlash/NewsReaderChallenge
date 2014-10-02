@@ -10,6 +10,8 @@
 #import "Constants.h"
 #import "Post.h"
 #import "PostDetailsViewController.h"
+#import "Utility.h"
+#import "NSString+HTML.h"
 
 @interface NewsFeedTableViewController ()
 
@@ -46,27 +48,16 @@
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];  // let user know we are using the network
     
-    NSURL *url = [NSURL URLWithString:self.feedURL];
-    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url
-                                                         completionHandler:
-                              ^(NSData *data, NSURLResponse *response, NSError *error) {
-                                  if (data) {
-                                      // Do stuff with the data
-                                      
-                                      NSDictionary *responseData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                                      // NSLog(@"reponseData:%@", responseData);
-                                      
-                                      self.posts = [responseData valueForKey:@"posts"];
-                                      // NSLog(@"posts.count:%lu", self.posts.count);
-                                      [self.tableView reloadData];
-                                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-                                  } else {
-                                      NSLog(@"Failed to fetch %@: %@", url, error);
-                                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-                                  }
-                              }];
-    [task resume];
-
+    // no retain cycle where self strongly references completion block and vice versa.
+    [Utility downloadFeedInBackgroundWithURL:[NSURL URLWithString:self.feedURL] completionBlock:^(BOOL succeeded, NSError *error, NSDictionary *data) {
+        if (data) {
+            self.posts = [data valueForKey:@"posts"];
+            [self.tableView reloadData];
+            
+        }
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    }];
+    
 }
 
 
@@ -94,7 +85,10 @@
     NSDictionary *postDict = self.posts[indexPath.row];
     NSDate *postDate = [self.dateFormatter dateFromString:postDict[@"date"]];
     
-    Post *post = [[Post alloc] initWithId:postDict[@"id"] title:postDict[@"title"] content:postDict[@"content"] excerpt:postDict[@"excerpt"] date:postDate];
+    NSString *postTitle = postDict[@"title"];
+    postTitle = [postTitle stripMarkUp];
+    
+    Post *post = [[Post alloc] initWithId:postDict[@"id"] title:postTitle content:postDict[@"content"] excerpt:postDict[@"excerpt"] date:postDate];
     
     
     UILabel *titleLabel = (UILabel*) [cell viewWithTag:100];

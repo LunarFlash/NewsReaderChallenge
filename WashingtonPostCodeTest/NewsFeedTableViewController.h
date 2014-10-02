@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSString+HTML.h"
 
 @interface NewsFeedTableViewController : UITableViewController
+
+
+
+
+
 
 @end
